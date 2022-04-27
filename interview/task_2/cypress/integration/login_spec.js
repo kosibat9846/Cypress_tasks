@@ -13,7 +13,6 @@ describe('Succesfull login', () => {
     afterEach(() => {
         loginPage.clickLogOutButton()
       })
-      
 
     const providedUserNames = [
         generateRandomAlphabetic(),
@@ -22,15 +21,6 @@ describe('Succesfull login', () => {
         generateRandomAlphabetic() + '1234',
         '${' + generateRandomAlphabetic() + '}',
         '${' + generateRandomAlphabetic() + '123}',
-        'a b c d',
-        'a b c d 1 2',
-        '# a b c d ^ (',
-        '# 1 a b c d ^ ( 3 }'
-        // ' ',
-        // '       ',
-        // ' abcd',
-        // 'abcd ',
-        // '       abcd   '
     ]
 
     providedUserNames.forEach(($type) => {
@@ -116,27 +106,26 @@ describe('Unsuccessful login', () => {
 });
 
 describe('Succesfull log out', () => {
-
   beforeEach(() => {
       loginPage.visit()
       loginPage.login(generateRandomAlphabetic(), correctPassword)
     })
 
-      specify('Should log out user with success after click log out button',  () => {
-          // When
-          loginPage.clickLogOutButton()
+    specify('Should log out user with success after click log out button',  () => {
+        // When
+        loginPage.clickLogOutButton()
 
-          // Then
-          loginPage.containsSuccessfulLoggedOutStatus()
-        });
+        // Then
+        loginPage.containsSuccessfulLoggedOutStatus()
+      });
 
-      specify('Should log out user when page reload',  () => {
-          // When
-          loginPage.visit()
+    specify('Should log out user when page reload',  () => {
+        // When
+        loginPage.visit()
 
-          // Then
-          loginPage.containsSuccessfulLoggedOutStatus()
-        });
+        // Then
+        loginPage.containsSuccessfulLoggedOutStatus()
+      });
 
     specify('Should log out user when page reload with cache',  () => {
         // When
