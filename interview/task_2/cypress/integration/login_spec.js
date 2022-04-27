@@ -1,4 +1,4 @@
-import LoginPage from "../../pages/login_spec";
+import LoginPage from "../pages/login_spec";
 
 const correctPassword = 'pwd'
 const incorrectPassword = 'wrongPwd'
