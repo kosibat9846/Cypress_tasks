@@ -26,11 +26,6 @@ describe('Succesfull login', () => {
         'a b c d 1 2',
         '# a b c d ^ (',
         '# 1 a b c d ^ ( 3 }'
-        // ' ',
-        // '       ',
-        // ' abcd',
-        // 'abcd ',
-        // '       abcd   '
     ]
 
     providedUserNames.forEach(($type) => {
@@ -122,20 +117,20 @@ describe('Succesfull log out', () => {
       loginPage.login(generateRandomAlphabetic(), correctPassword)
     })
 
-      specify('Should log out user with success after click log out button',  () => {
-          // When
-          loginPage.clickLogOutButton()
+    specify('Should log out user with success after click log out button',  () => {
+        // When
+        loginPage.clickLogOutButton()
 
-          // Then
-          loginPage.containsSuccessfulLoggedOutStatus()
+        // Then
+        loginPage.containsSuccessfulLoggedOutStatus()
         });
 
-      specify('Should log out user when page reload',  () => {
-          // When
-          loginPage.visit()
+    specify('Should log out user when page reload',  () => {
+        // When
+        loginPage.visit()
 
-          // Then
-          loginPage.containsSuccessfulLoggedOutStatus()
+        // Then
+        loginPage.containsSuccessfulLoggedOutStatus()
         });
 
     specify('Should log out user when page reload with cache',  () => {
