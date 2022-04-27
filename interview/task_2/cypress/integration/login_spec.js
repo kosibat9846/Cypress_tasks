@@ -26,11 +26,7 @@ describe('Succesfull login', () => {
         'a b c d 1 2',
         '# a b c d ^ (',
         '# 1 a b c d ^ ( 3 }'
-        // ' ',
-        // '       ',
-        // ' abcd',
-        // 'abcd ',
-        // '       abcd   '
+
     ]
 
     providedUserNames.forEach(($type) => {
